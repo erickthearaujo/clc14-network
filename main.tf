@@ -1,5 +1,6 @@
 variable "vpc_name" {
-  type    = string
+  type = string
+  default = "vpc-terraform-v2"
 }
 
 resource "aws_vpc" "minha_vpc" {
@@ -174,3 +175,4 @@ resource "aws_nat_gateway" "nat_gw_1b" {
   # on the Internet Gateway for the VPC.
   depends_on = [aws_internet_gateway.igw]
 }
+
